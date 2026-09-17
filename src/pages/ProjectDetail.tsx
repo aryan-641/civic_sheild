@@ -2,7 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
 import { projects } from '../data/projects';
 import { assets } from '../data/assets';
-import { companies } from '../data/companies';
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -14,7 +13,6 @@ export default function ProjectDetail() {
 
   const costVariation = ((project.finalCost - project.originalCost) / project.originalCost * 100);
   const fundsMismatch = project.fundsUtilized - project.progress;
-  const company = companies.find(c => c.id === project.contractorId);
   const relatedAsset = assets.find(a => a.events.some(e => e.projectId === project.id));
 
   return (

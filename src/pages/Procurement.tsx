@@ -1,6 +1,6 @@
 import { AlertTriangle } from 'lucide-react';
 import { procurementData } from '../data/procurement';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ReferenceLine } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 export default function Procurement() {
   return (
@@ -36,7 +36,7 @@ export default function Procurement() {
                         <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
                         <XAxis type="number" tick={{ fontSize: 11 }} domain={[0, 'auto']} />
                         <YAxis dataKey="name" type="category" tick={{ fontSize: 10 }} width={100} />
-                        <Tooltip formatter={(value: number) => [`₹${value.toFixed(1)} Cr`, 'Amount']} />
+                        <Tooltip formatter={(value: any) => [`₹${Number(value).toFixed(1)} Cr`, 'Amount']} />
                         <Bar dataKey="value" radius={[0, 4, 4, 0]}>
                           {chartData.map((entry, index) => (
                             <Bar key={index} dataKey="value" fill={entry.fill} />

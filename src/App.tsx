@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-do
 import { useState, useEffect } from 'react';
 import {
   LayoutDashboard, Building2, FolderKanban, ShoppingCart,
-  Package, History, Zap, Sun, Moon, Shield, Menu, X
+  Package, History, Zap, Sun, Moon, Shield, Menu
 } from 'lucide-react';
 import Overview from './pages/Overview';
 import Companies from './pages/Companies';
