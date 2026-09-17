@@ -1,32 +1,60 @@
-# React + TypeScript + Vite
+# 🛡️ CivicShield
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Public Procurement Anomaly Detection — Hackathon Prototype**
 
-Currently, two official plugins are available:
+CivicShield creates an evidence-based audit trail of Companies → Bids → Projects → Materials → Payments → Asset History and identifies projects that deserve human investigation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> ⚠️ This prototype uses **synthetic demo data** — not real government records.
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open **http://localhost:5173**
+
+## ✨ Features
+
+| Page | Description |
+|------|-------------|
+| **Overview** | KPI dashboard with charts for project status, funds, costs, and review signals |
+| **Companies** | 10 synthetic companies with searchable performance table & drill-down profiles |
+| **Projects** | 28 searchable/filterable projects with detailed contract, cost, timeline, and materials views |
+| **Procurement** | Bid comparison and contract award analysis with visual charts |
+| **Materials Audit** | Price deviation tracking across all materials with supplier verification |
+| **Asset History** | Visual timeline of infrastructure assets tracking re-interventions |
+| **⚡ Anomaly Detector** | Rule-based analysis engine with explainable review signals |
+
+## 🔍 Anomaly Detection Rules
+
+The system uses **deterministic, explainable rules** — no ML/AI:
+
+| Signal | Condition |
+|--------|-----------|
+| Cost Variation | Final cost > 10% above original |
+| Material Price | Purchase price > 15% above reference |
+| Early Re-Intervention | Related work within 24 months |
+| Progress/Funds Mismatch | Funds utilized - progress > 15% |
+| Vendor History | Contractor has ≥2 late projects |
+
+## 🎨 Tech Stack
+
+- **React** + **TypeScript** + **Vite**
+- **Tailwind CSS** v4 (dark/light mode)
+- **Recharts** for data visualization
+- **Lucide** icons
+- **React Router** v7 for navigation
+
+## 📋 Important Notes
+
+- Uses terms like "Review Signal", "Anomaly Detected", "Investigation Priority"
+- **Never** claims corruption or fraud
+- All signals are explainable with evidence
+- Dark/Light mode persisted via localStorage
+- Fully responsive layout
+
+## License
+
+MIT
