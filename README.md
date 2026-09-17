@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:5173**
+Open **https://temporary-snappy-jade-yae20ny.vercel.app/**
 
 ## ✨ Features
 
